@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="img/favicon.ico" />
+<title>CRONO_ DREAMBOX PS4 FW 9.00 V11</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/simple-notify.min.css" />
+<style> 
+    html, body{
+      background: url('img/bg1.png');
+      background-attachment: fixed;
+      margin:auto;
+      font-size:20px;
+      font-weight:lighter;
+      color:#FFFFFF;
+      background-color: #000;
+      background-attachment: fixed;
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+}
+</style>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body onload="poc()">
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Instalado com Successo ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Agora Feche e Re-Abra o Navegador...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<h1 id="msgs">CRONO_ DREAMBOX PS4 FW 9.00 V11</h1>
+<hr>
+<br>
+<div id="main-section">
+<button class="btn btn-main" type="button" onmouseover="msgs.innerHTML='Executar GoldHen V2.2.5b8 FW 9.00'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"><img class="icone" src="img/HenEnable.png" onclick=load_goldhen225b8()><br> GoldHEN V2.2.5b8 </button>
+<button class="btn btn-main" type="button" onmouseover="msgs.innerHTML='Executar GoldHen V2.2.5b7 FW 9.00'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"><img class="icone" src="img/HenEnable.png" onclick=load_goldhen225b7()><br> GoldHEN V2.2.5b7 </button>
+<button class="btn btn-main" type="button" onmouseover="msgs.innerHTML='Executar GoldHen V2.2.4 FW 9.00'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"><img class="icone" src="img/HenEnable.png"onclick=load_goldhen224()><br> GoldHEN V2.2.4 </button>
+<br>
+
+<br>
+<a href="https://twitter.com/cronocardoso"><img class="icon" src="img/icon.gif"/></a> 
+<br>
+
+<hr style="width: 70%"><h1 style="color:#00FF12;" >PAYLOADS</h1><hr style="width: 70%">
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Enviar um Arquivo .BIN para o PS4'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'" onclick=load_binloader()><img class="icone" src="img/binloader.png" /><br> Bin Loader </button>
+<button class="btn" onmouseover="msgs.innerHTML='Executar App To Usb'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'" onclick=load_app2usb()><img class="icone" src="img/app2usb.png" /><br> App-To-Usb </button>
+<button class="btn" onmouseover="msgs.innerHTML='Executar ToDex'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_todex()><img class="icone" src="img/todex.png" /><br> To -  Dex </button>
+<button class="btn" onmouseover="msgs.innerHTML='Executar FTP PS4'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_ftp()><img class="icone" src="img/ftp.png" /><br> FTP </button>
+<button class="btn" onmouseover="msgs.innerHTML='Executar TooBox PS4'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_toolbox()><img class="icone" src="img/ps4debug.png" /><br> Orbis Toolbox </button>
+<button class="btn" onmouseover="msgs.innerHTML='Executar Controle de Fan'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_fanthreshold()><img class="icone" src="img/FanControl.png" /><br>  Controle de Fan </button><select id="tempC" style="font-size:20px; height:35px; width:60px; background-color:#4D0094; color:#fff; border:3px solid #6C0000" ></select>&#176;C
+
+<br>
+
+<button class="btn" onmouseover="msgs.innerHTML='Desabilitar Updates Oficiais'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_disableUpdates()><img class="icone" src="img/disableupdate.png" /><br> Desabilitar Upadates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Habilitar Updates Oficiais'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_enablebUpdates()><img class="icone" src="img/enableupdate.png" /><br> Habilitar Upadates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Backup do Banco de Dados do PS4'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_dbackup()><img class="icone" src="img/backup.png" /><br> Backup DB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Restaurar Banco de Dados do PS4'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_dbrestore()><img class="icone" src="img/restore.png" /><br> Restaurar DB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Desabilita o Historico no Navegador'" onmouseout="msgs.innerHTML='CRONO_ DREAMBOX PS4 FW 9.00 V11'"  onclick=load_historyBlocker()><img class="icone" src="img/disableupdate.png" /><br> Bloquear Historico </button>
+
+</div>
+
+<br><br>
+<script>
+for(var i=40; i<=75; i=i+5){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+    select.options.add(option);
+    option.text = i;
+    option.value = i;
+}
+tempC.value=60;
+</script>
+<script>
+function load_mods(){
+document.getElementById("mods-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+
+function back(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("mods-section").style.display = "none";
+}
+
+function allset(){
+msgs.innerHTML = LoadedMSG
+}
+
+function load_poc(){
+var xhr = new XMLHttpRequest();
+xhr.responseType = "arraybuffer";
+xhr.open("GET",PLfile,true);
+xhr.send();
+xhr.onreadystatechange=function(){
+if (xhr.readyState == 4){
+  var tmp0 = new Uint8Array(xhr.response.byteLength);
+  tmp0.set(new Uint8Array(xhr.response), 0);
+  var payload = new Uint32Array(tmp0);
+  loadPL = payload;
+  launch_payload();
+  }
+};
+}
+
+function launch_payload(){
+    if (exec_loader == "payload"){
+        var payload_buffer = chain.syscall(477, 0, loadPL.length, 7, 0x1002, -1, 0);
+        var buf = new Uint8Array(1);
+        var buf_addr = p.leakval(buf);
+        var old_buf = p.read8(buf_addr.add32(16));
+        var old_sz = p.read4(buf_addr.add32(24));
+        p.write8(buf_addr.add32(16), payload_buffer);
+        p.write4(buf_addr.add32(24), loadPL.length);
+        for(var i = 0; i < loadPL.length; i++) buf[i] = loadPL[i];
+        p.write8(buf_addr.add32(16), old_buf);
+        p.write4(buf_addr.add32(24), old_sz);
+        var pthread = p.malloc(0x10);
+        chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_buffer, 0);
+        allset();
+    }
+else if (exec_loader == "binloader"){
+    var payload_buffer = chain.syscall(477, 0x0, 0x300000, 0x7, 0x1000, 0xFFFFFFFF, 0);
+    var payload_loader = p.malloc32(0x1000);
+    var loader_writer = payload_loader.backing;
+    loader_writer[0] = 0x56415741;
+    loader_writer[1] = 0x83485541;
+    loader_writer[2] = 0x894818EC;
+    loader_writer[3] = 0xC748243C;
+    loader_writer[4] = 0x10082444;
+    loader_writer[5] = 0x483C2302;
+    loader_writer[6] = 0x102444C7;
+    loader_writer[7] = 0x00000000;
+    loader_writer[8] = 0x000002BF;
+    loader_writer[9] = 0x0001BE00;
+    loader_writer[10] = 0xD2310000;
+    loader_writer[11] = 0x00009CE8;
+    loader_writer[12] = 0xC7894100;
+    loader_writer[13] = 0x8D48C789;
+    loader_writer[14] = 0xBA082474;
+    loader_writer[15] = 0x00000010;
+    loader_writer[16] = 0x000095E8;
+    loader_writer[17] = 0xFF894400;
+    loader_writer[18] = 0x000001BE;
+    loader_writer[19] = 0x0095E800;
+    loader_writer[20] = 0x89440000;
+    loader_writer[21] = 0x31F631FF;
+    loader_writer[22] = 0x0062E8D2;
+    loader_writer[23] = 0x89410000;
+    loader_writer[24] = 0x2C8B4CC6;
+    loader_writer[25] = 0x45C64124;
+    loader_writer[26] = 0x05EBC300;
+    loader_writer[27] = 0x01499848;
+    loader_writer[28] = 0xF78944C5;
+    loader_writer[29] = 0xBAEE894C;
+    loader_writer[30] = 0x00001000;
+    loader_writer[31] = 0x000025E8;
+    loader_writer[32] = 0x7FC08500;
+    loader_writer[33] = 0xFF8944E7;
+    loader_writer[34] = 0x000026E8;
+    loader_writer[35] = 0xF7894400;
+    loader_writer[36] = 0x00001EE8;
+    loader_writer[37] = 0x2414FF00;
+    loader_writer[38] = 0x18C48348;
+    loader_writer[39] = 0x5E415D41;
+    loader_writer[40] = 0x31485F41;
+    loader_writer[41] = 0xC748C3C0;
+    loader_writer[42] = 0x000003C0;
+    loader_writer[43] = 0xCA894900;
+    loader_writer[44] = 0x48C3050F;
+    loader_writer[45] = 0x0006C0C7;
+    loader_writer[46] = 0x89490000;
+    loader_writer[47] = 0xC3050FCA;
+    loader_writer[48] = 0x1EC0C748;
+    loader_writer[49] = 0x49000000;
+    loader_writer[50] = 0x050FCA89;
+    loader_writer[51] = 0xC0C748C3;
+    loader_writer[52] = 0x00000061;
+    loader_writer[53] = 0x0FCA8949;
+    loader_writer[54] = 0xC748C305;
+    loader_writer[55] = 0x000068C0;
+    loader_writer[56] = 0xCA894900;
+    loader_writer[57] = 0x48C3050F;
+    loader_writer[58] = 0x006AC0C7;
+    loader_writer[59] = 0x89490000;
+    loader_writer[60] = 0xC3050FCA;
+    chain.syscall(74, payload_loader, 0x4000, (0x1 | 0x2 | 0x4));
+
+    var pthread = p.malloc(0x10);
+    //
+    {
+        chain.fcall(window.syscalls[203], payload_buffer, 0x300000);
+        chain.fcall(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_loader, payload_buffer);
+    }
+    chain.run();
+	alert("Aguardando Payload... Envie-o usando o IP do PS4 e a porta 9020");
+	allset();
+	}
+}
+
+function loadScript(path)
+{
+    var xhr = new XMLHttpRequest(path);
+    xhr.open("GET", path, false);
+    xhr.send('');
+    return xhr.responseText;
+}
+
+function load_goldhen225b8(){
+LoadedMSG = "Carregando GoldHEN v2.2.5b8 ...";
+PLfile = "goldhen_2.2.5b8.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_goldhen225b7(){
+LoadedMSG = "Carregando GoldHEN v2.2.5b7 ...";
+PLfile = "goldhen_2.2.5b7.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_goldhen224(){
+LoadedMSG = "Carregando GoldHEN v2.2.4 ...";
+PLfile = "goldhen_2.2.4.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_binloader(){
+LoadedMSG = "Carregando Bin Loader ...";
+exec_loader = "binloader";
+launch_payload();
+}
+
+function load_todex(){
+LoadedMSG = "Carregando ToDex ...";
+PLfile = "todex.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_ftp(){
+LoadedMSG = "Carregando FTP ..."
+PLfile = "ftp.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_app2usb(){
+LoadedMSG = "Carregando App2USB ..."
+PLfile = "app2usb.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_dbackup(){
+LoadedMSG = "Carregando DB Backup ..."
+PLfile = "backup.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_dbrestore(){
+LoadedMSG = "Carregando DB Restore ..."
+PLfile = "restore.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_enablebUpdates(){
+LoadedMSG = "Habilitando Updates ..."
+PLfile = "restore.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_disableUpdates(){
+LoadedMSG = "Desabilitando Updates ..."
+PLfile = "disable-updates.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_historyBlocker(){
+LoadedMSG = "Carregando History Blocker ..."
+PLfile = "history-blocker.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_toolbox(){
+LoadedMSG = "Carregando Orbis-Toolbox ..."
+PLfile = "Orbis-Toolbox-900.bin";
+exec_loader = "payload";
+load_poc();
+}
+
+function load_fanthreshold(){
+LoadedMSG="Carregando Fan Control ..."
+PLfile = "fan-threshold"+tempC.value+".bin";
+exec_loader = "payload";
+load_poc();
+}
+
+</script>
+</body>
+</html>
